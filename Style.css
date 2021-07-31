@@ -1,0 +1,9 @@
+.trapezoid {
+    height:0;
+    width:11vw;
+    border-right: 1vw solid transparent;
+    border-left: 1vw solid transparent;
+    border-bottom: 3vw solid grey;
+    
+
+}
