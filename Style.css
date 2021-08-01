@@ -3,7 +3,24 @@
     width:11vw;
     border-right: 1vw solid transparent;
     border-left: 1vw solid transparent;
-    border-bottom: 3vw solid grey;
-    
+    border-bottom: 4vw solid blue;
+    color: white;
+    text-align: center;
+}
 
+
+
+#console, #console-mini{
+    background-color: blue;
+    color: white;
+    border-style: solid;
+    border-color: black;
+    border-width: 3px;
+}
+
+#console-mini{
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
 }
