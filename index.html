@@ -10,19 +10,32 @@
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-wEmeIV1mKuiNpC+IOBjI7aAzPcEZeedi5yW5f2yOq55WWLwNGmvvx4Um1vskeMj0" crossorigin="anonymous">
+
+        <style>
+            @font-face { font-family: Cybertron-rpD9; src: url('Assets/cybertron-font/Cybertron-rpD9.ttf'); } 
+            body {
+               font-family: Cybertron-rpD9
+            }
+          </style>
 </head>
 
-<body onload="typeWriter()">
-    <header style="margin-top: 3%;">
-
+<body onload="greet(); about();">
+    <header>
+        <img src="Assets/ArkExt.png" class="img-fluid" alt="Responsive image">
     </header>
     <div class="container" style="display: table;">
         <div class="row" style="margin: 3%; height:400px;">
             <div id="console-mini" class="col-sm-2" style="border-style: solid; height:33%; margin-right:3% ;">
                 <p>Message Me</p>
             </div>
-            <div id="console" class="col-sm-7" style="border-style: solid;">
+            <div id="console" class="col-sm-7" style="border-style: solid; padding: auto;">
                 <h3 id="greeting"></h3>
+                <br>
+                <div class="row">
+                <div class="col-sm-8" style="border-style: solid; border-color:  white; border-width: 4px; border-radius: 10px; margin:5%">
+                    <p id="About"></p>
+                </div>
+            </div>
             </div>
             <div id="console-mini" class="col-sm-2" style="border-style: solid; height:33%; margin-left: 3%;">
                 <p>Images</p>
@@ -37,7 +50,8 @@
                 <div></div>
             </div>
             <div id="console-mini" class="col-sm-1" style="border-style: solid; margin:1% 1% 1% 3%">
-                <a type="button" class="btn-btn-primary text-white" href="PersonalityProfile.html">Personality Profile</a>
+                <a type="button" class="btn-btn-primary text-white" href="PersonalityProfile.html">Personality
+                    Profile</a>
             </div>
             <div id="console-mini" class="col-sm-1" style="border-style: solid;  margin:1%;">
                 <a type="button" class="btn-btn-primary text-white" href="Projects.html">Projects</a>
@@ -64,17 +78,29 @@
     </footer>
     <script>
         var i = 0;
-        var txt = "Ba Weep Gra' Na Weep Ninny Bong.";
-        var speed = 50;
-        
-        function typeWriter() {
-          if (i < txt.length) {
-            document.getElementById("greeting").innerHTML += txt.charAt(i);
-            i++;
-            setTimeout(typeWriter, speed);
-          }
+        var txtGreet = "Ba Weep Gra' Na Weep Ninny Bong";
+        var speedGreet = 100;
+
+        function greet() {
+            if (i < txtGreet.length) {
+                document.getElementById("greeting").innerHTML += txtGreet.charAt(i);
+                i++;
+                setTimeout(greet, speedGreet);
+            }
         }
-        </script>
+
+        var y = 0;
+        var txtAbout = "I am a creative problem solver who savors an abstract puzzle. Because I thrive in creating solutions to unsolvable problems, I can use my creativity to deliver automated solutions that save time, are scalable as necessary, and easy for everyone!";
+        var speedAbout = 10;
+
+        function about() {
+            if (y < txtAbout.length) {
+                document.getElementById("About").innerHTML += txtAbout.charAt(y);
+                y++;
+                setTimeout(about, speedAbout);
+            }
+        }
+    </script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-p34f1UUtsS3wqzfto5wAAmdvj+osOnFyQFpp4Ua3gs/ZVWx6oOypYoCJhGGScy+8"
         crossorigin="anonymous"></script>
