@@ -59,7 +59,7 @@
   <section id="TheFold" class="d-flex flex-column justify-content-center align-items-center">
     <div class="Fold-container" data-aos="fade-in">
       <h1>Jonathan Dikteruk</h1>
-      <h2>I am &Tab;<span>a Developer</span></h2>>
+      <h2>I am &Tab;<span class="typed" data-typed-items="a Developer,a Problem Solver "></span></h2>
     </div>
   </section>
 </header>
@@ -399,7 +399,33 @@
 <section id="Contact">
   <h2>Let's Connect!</h2>
   <hr>
-  
+  <form>
+    <div class="row">
+      <div class="col-md-4">
+        <div class="row">
+          <label class="form-label">Name:</label> 
+          <input type="text" class="form-control" id="name" required>
+        </div>
+        <div class="row">
+          <label class="form-label">E-Mail:</label> 
+          <input type="email" class="form-control" id="email" required>
+        </div>
+        <div class="row">
+          <label class="form-label">Contact Number:</label> 
+          <input type="tel" class="form-control" id="name" placeholder="Optional">
+        </div>
+      </div>
+      <div class="col-md-4">
+        <label class="form-label">Message: </label> 
+        <textarea class="form-control" id="message" required></textarea>
+        <br>
+        <div class="d-flex justify-content-end">
+          <button type="submit" class="btn btn-primary">Send</button>
+        </div>
+      </div>
+    </div>
+  </form>
+
 </section>
 </main>
 <script src="https://smtpjs.com/v3/smtp.js"></script>
