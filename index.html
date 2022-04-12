@@ -10,426 +10,74 @@
 
   <!-- Stylesheets -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-  <link href="./style/style.css" rel="stylesheet">
+  <link href="./assets/style/style.css" rel="stylesheet">
 
   <!-- Gonts & Icons -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
-  <!--<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Filled" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Rounded" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Sharp" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Two-Tone" rel="stylesheet">
-  -->
+  
 </head>
 <body>
 <!-- Header -->
-<header id="header">
-  <nav id="navbar" class="nav-menu navbar">
-    <div class="profile">
-      <img src="./images/Me_Placeholder.jpg" alt="">
-      <h3>Jonathan Dikteruk</h3>
-      <h4>(DIK - ter - OOK)</h4>
-      <a href="index.html" class="nav-link scrollto active">
-        <i class="bi bi-house-door-fill"></i>
-        <span>Home</span>
-      </a>
-      <a href="#About" class="nav-link scrollto">
-        <i class="bi bi-file-person-fill"></i>
-        <span>About</span>
-      </a>
-      <a href="#Skills" class="nav-link scrollto">
-        <i class="bi bi-tools"></i>
-        <span>Skills</span>
-      </a>
-      <a href="#Portfolio" class="nav-link scrollto">
-        <i class="bi bi-briefcase-fill"></i>
-        <span>Portfolio</span>
-      </a>
-      <a href="#Contact" class="nav-link scrollto">
-        <i class="bi bi-envelope-fill"></i>
-        <span>Contact</span>
-      </a>
-      <br>
-      <br>
-      <br>
-      <p>&copy; <script>document.write(new Date().getFullYear())</script> - Jonathan Dikteruk</p>
-    </div>
-  </nav>
-  <section id="TheFold" class="d-flex flex-column justify-content-center align-items-center">
-    <div class="Fold-container" data-aos="fade-in">
-      <h1>Jonathan Dikteruk</h1>
-      <h2>I am &Tab;<span class="typed" data-typed-items="a Developer,a Problem Solver "></span></h2>
-    </div>
+<header>
+  <section id="nav">
+    <nav id="navbar" class="nav-menu navbar">
+      <div class="profile">
+        <img src="./assets/images/Me_Placeholder.jpg" alt="">
+        <h3 class="name"><div id="fName">Jonathan</div><div id="lName">Dikteruk</div></h3>
+        <h5 class="name">
+          (DIK - ter - OOK)
+        </h5>
+        <div class="links">
+          <a href="index.html" class="nav-link scrollto active">
+            <i class="bi bi-house-door-fill"></i>
+            <span>Home</span>
+          </a>
+          <a href="#About" class="nav-link scrollto">
+            <i class="bi bi-file-person-fill"></i>
+            <span>About</span>
+          </a>
+          <a href="#Skills" class="nav-link scrollto">
+            <i class="bi bi-tools"></i>
+            <span>Skills</span>
+          </a>
+          <a href="#Portfolio" class="nav-link scrollto">
+            <i class="bi bi-briefcase-fill"></i>
+            <span>Portfolio</span>
+          </a>
+          <a href="#Contact" class="nav-link scrollto">
+            <i class="bi bi-envelope-fill"></i>
+            <span>Contact</span>
+          </a>
+        </div>
+        <p id="copyright">&copy; <script>document.write(new Date().getFullYear())</script> - Jonathan Dikteruk</p>
+      </div>
+    </nav>
+  </section>
+  <section id="header">
+    
+
   </section>
 </header>
 <main>
 <!-- About -->
 <section id="About">
-  <h2>ABOUT</h2>
-  <h3>Providing technical solutions to conquer business problems</h3>
-  <hr>
-  <div>
-      <h4>A Developer's Development</h4>
-      <h5>Asking the "RIGHT" questions</h5>
-      <p>Are you in need of a business solution that will:
-          <ul> 
-              <li>reduce man-hours</li>
-              <li>remove the grind of repetitive tasks</li>
-              <li>easily duplicate results</li>
-              <li>take the complexity out of that process</li>
-              <li>eliminate the human element of data manipulation</li>
-          </ul>
-          <span>Congratulations!</span> Your search is at an end.
-      </p>
-      <h5>VLOOKUP is for beginners</h5>
-      <p>Thousands of records, multiple commissions rules, a year's worth of data in review led myself to keep asking 
-          <br><span>"Self, how can we do this better?"</span>
-          <br>I scoured Google and YouTube to find the answers and got bit by the programming bug. 
-          <br>What?! No, not THAT bug. It was the intense burning desire for learning more. 
-          <br>I took that analysis from several days to a few hours, and with the help of a business analyst, also took my first steps into SQL.
-      </p>
-      <h5>It took you HOW LONG?</h5>
-      <p>When a colleague said it took three days a month to compile data, balance accounting, and report results I almost cried. 
-          <br>I can help!. Let me help. I'm certain I can shave a few hours at least off that.
-          <br>Not only did I cut hours, I cut days. From start to finish compiling data, identify the balancing issues, and generate those results consistently now took 2-3 hours.
-      </p>
-      <h5>Integrating Data Integrity</h5>
-      <p>You're telling me we have four workbooks to enter information. Why?!?
-          <br>I constructed a user form to enter the information <strong>once</strong>. I eliminated the need for adjustments in the commissions department and drastically reduced the number of hours it took to audit those commission records.
-          <br>The data was parsed and saved to the various workbooks, performed complex calculations, and automatically send commissions paperwork to payroll for processing.
-      </p>
-          <br>
-      <h5>Impressed?</h5>
-      <p>See my <a href="#">resume</a>. Connect on <a href="https://www.linkedin.com/in/jonathandikteruk/" target="_blank">LinkedIn</a></p>
-      <p>You know what needs to be done. 
-        <br>Click <span><a href="#schedule">here</a></span> to schedule a call.
-        <br>Or Contact me directly <a href="#contact">here.</a></p>
-  </div>
-  <div>
-      <h4>Work Style</h4>
-      <p>I foster an environment of accountability, open communication and transparency, and problem ownership with a shared achievement of success all in a humorous, low-stress package.
-          <br>Don't just take my word for it. See for yourself.
-      </p>
-      <!-- Save as html pages to ref in folder; make 3 cols-->
-          <a href="https://strengthsbasedresilience.com/assessments/feedback/RzJL8BGJbr" target="_blank">here</a>
-
-          <a href="https://secure.plum.io/p/TEJm1vzdvTiA9V35v05pYw" target="_blank">or here</a>
-  </div>
-  <div>
-      <h4>Passion & Motivation</h4>
-      <p>Now, you <i>should</i> have a better idea of the <span>what</span> and the <span>how</span>. Time for the <span>why</span>.
-          <br>My answer is simple. This is my Thor. All I long for is to give him a comfortable life and the backyard he deserves.
-      </p>
-      <!-- carousel of Thor -->
-      <div class="container">
-        <div id="carousel" class="carousel slide" data-bs-ride="carousel">
-          <div class="carousel-inner">
-            <div class="carousel-item active">
-              <img src="./images//Thor/ThorAmCute.jpg" class="d-block w-100" alt="...">
-            </div>
-            <div class="carousel-item">
-              <img src="./images/Thor/ThorCuddles1.jpg" class="d-block w-100" alt="...">
-            </div>
-            <div class="carousel-item">
-              <img src="./images/Thor/ThorDinners.jpg" class="d-block w-100" alt="...">
-            </div>
-            <div class="carousel-item">
-              <img src="./images/Thor/ThorCuddles2.jpg" class="d-block w-100" alt="...">
-            </div>
-            <div class="carousel-item">
-              <img src="./images/Thor/ThorAmWorried.jpg" class="d-block w-100" alt="...">
-            </div>
-            <div class="carousel-item">
-              <img src="./images/Thor/ThorDrives.jpg" class="d-block w-100" alt="...">
-            </div>
-            <div class="carousel-item">
-              <img src="./images/Thor/ThorCuddles3.jpg" class="d-block w-100" alt="...">
-            </div>
-            <div class="carousel-item">
-              <img src="./images/Thor/ThorBlankie.jpg" class="d-block w-100" alt="...">
-            </div>
-            <div class="carousel-item">
-              <img src="./images/Thor/ThorSits.jpg" class="d-block w-100" alt="...">
-            </div>
-            <div class="carousel-item">
-              <img src="./images/Thor/ThorAmHapp.jpg" class="d-block w-100" alt="...">
-            </div>
-          </div>
-        </div>
-      </div>
-
-  </div>
+ 
 </section>
-
-
-</div>
 <!-- Skills -->
 <section id="Skills">
-  <h2>SKILLS</h2>
-  <hr>
-    <div>
-        <h4>Programming Languages</h4>
-          <div class="row justify-content-center">
-            <div class="col-md-2">
-              <div class="card" style="width: 18rem;">
-                  <img class="card-img-top" src="images/cSharpLogo.jpg" alt="Card image cap">
-                  <div class="card-body">
-                  <h4 class="card-title">C#</h4>
-                  <p class="card-text">Brief summary of what the project does.</p>
-                  </div>
-              </div>
-            </div>
-            <div class="col-md-2">
-              <div class="card" style="width: 18rem;">
-                  <img class="card-img-top" src="images/dotnet.svg" alt="Card image cap">
-                  <div class="card-body">
-                  <h4 class="card-title">ASP.NET</h4>
-                  <p class="card-text">Brief summary of what the project does.</p>
-                  </div>
-              </div>
-            </div>
-            <div class="col-md-2">
-              <div class="card" style="width: 18rem;">
-                  <img class="card-img-top" src="images/VBA.png" alt="Card image cap">
-                  <div class="card-body">
-                  <h4 class="card-title">VBA</h4>
-                  <p class="card-text">Brief summary of what the project does.</p>
-                  </div>
-              </div>
-            </div>
-            <div class="col-md-2">
-              <div class="card" style="width: 18rem;">
-                  <img class="card-img-top" src="images/batchLogo.png" alt="Card image cap">
-                  <div class="card-body">
-                  <h4 class="card-title">Batch</h4>
-                  <p class="card-text">Brief summary of what the project does.</p>
-                  </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="row justify-content-center">
-          <div class="col-md-2">
-            <div class="card" style="width: 18rem;">
-              <img class="card-img-top" src="images/HTMLLogo.png" alt="Card image cap">
-              <div class="card-body">
-                <h4 class="card-title">HTML CSS JS</h4>
-                <p class="card-text">Brief summary of what the project does.</p>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-2">
-            <div class="card" style="width: 18rem;">
-              <img class="card-img-top" src="images/..." alt="Card image cap">
-              <div class="card-body">
-                <h4 class="card-title">SQL</h4>
-                <p class="card-text">Brief summary of what the project does.</p>
-                <ul class="list-group list-group-flush">
-                  <li class="list-group-item">MySQL</li>
-                  <li class="list-group-item">T-SQL</li>
-                  <li class="list-group-item">Oracle SQL</li>
-                  <li class="list-group-item">PostgreSQL</li>
-                </ul>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-2">
-            <div class="card" style="width: 18rem;">
-              <img class="card-img-top" src="./images/oracleLogo.jpg" alt="Card image cap">
-              <div class="card-body">
-                <h4 class="card-title">Oracle</h4>
-                <p class="card-text">Brief summary of what the project does.</p>
-              </div>
-            </div>
-          </div>
-        
-    </div>
-
-        <!-- make this a table -->
-        <h4>Soft Skills</h4>
-        <ul>
-            <li>Effective Communication</li>
-            <li>Communicating technical information to non-technical audience</li>
-            <li>Logical Problem Solver</li>
-        </ul>
-    </div>
-    <div>
-        <h4>Technical Skills</h4>
-        <ul>
-            <li>Relational Databases</li>
-            <li>Peoplesoft Finance & HCM </li>
-            <li> </li>
-        </ul>
-    </div>
+ 
 </section>
 
 <!-- Portfolio -->
-  <section id="Portfolio">
-    <h2>PORTFOLIO</h2>
-    <hr>
-    <div class="row justify-content-center">
-      <div class="col-md-3">
-        <div class="card" style="width: 18rem;">
-          <img class="card-img-top" src="./images/Wheeljack.PNG" alt="Card image cap">
-          <div class="card-body">
-            <h4 class="card-title">Wheeljack's Lab</h4>
-            <p class="card-text">A Project Management / Issue Tracker</p>
-          </div>
-          <ul class="list-group list-group-flush">
-            <li class="list-group-item">What did I use to build?</li>
-            <li class="list-group-item">Some other detail</li>
-          </ul>
-          <div class="card-body">
-            <a href="#" class="card-link">Link to project application</a>
-            <a href="#" class="card-link">Link to Blog re application development</a>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-3">
-        <div class="card" style="width: 18rem;">
-          <img class="card-img-top" src="./images/SoundwavePlaceholder.jpg" alt="Card image cap">
-          <div class="card-body">
-            <h4 class="card-title">Blog</h4>
-            <p class="card-text">Brief summary of what the project does.</p>
-          </div>
-          <ul class="list-group list-group-flush">
-            <li class="list-group-item">What did I use to build?</li>
-            <li class="list-group-item">Some other detail</li>
-          </ul>
-          <div class="card-body">
-            <a href="#" class="card-link">Link to project application</a>
-            <a href="#" class="card-link">Link to Blog re application development</a>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-3">
-        <div class="card" style="width: 18rem;">
-          <img class="card-img-top" src="./images/Matrix.jpg" alt="Card image cap">
-          <div class="card-body">
-            <h4 class="card-title">Thought Recorder</h4>
-            <p class="card-text">Brief summary of what the project does.</p>
-          </div>
-          <ul class="list-group list-group-flush">
-            <li class="list-group-item">What did I use to build?</li>
-            <li class="list-group-item">Some other detail</li>
-          </ul>
-          <div class="card-body">
-            <a href="#" class="card-link">Link to project application</a>
-            <a href="#" class="card-link">Link to Blog re application development</a>
-          </div>
-        </div>
-        </div>
-      </div>
-      <div class="row justify-content-center">
-        <div class="col-md-3">
-          <div class="card" style="width: 18rem;">
-            <img class="card-img-top" src="./images/Frost.jpg" alt="Card image cap">
-            <div class="card-body">
-              <h4 class="card-title">Website</h4>
-              <p class="card-text">Brief summary of what the project does.</p>
-            </div>
-            <ul class="list-group list-group-flush">
-              <li class="list-group-item">What did I use to build?</li>
-              <li class="list-group-item">Some other detail</li>
-            </ul>
-            <div class="card-body">
-              <a href="#" class="card-link">Link to project application</a>
-              <a href="#" class="card-link">Link to Blog re application development</a>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-3">
-          <div class="card" style="width: 18rem;">
-            <img class="card-img-top" src="./images/Ship.png" alt="Card image cap">
-            <div class="card-body">
-              <h4 class="card-title">Inventory Control</h4>
-              <p class="card-text">Brief summary of what the project does.</p>
-            </div>
-            <ul class="list-group list-group-flush">
-              <li class="list-group-item">What did I use to build?</li>
-              <li class="list-group-item">Some other detail</li>
-            </ul>
-            <div class="card-body">
-              <a href="#" class="card-link">Link to project application</a>
-              <a href="#" class="card-link">Link to Blog re application development</a>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-3">
-          <div class="card" style="width: 18rem;">
-            <img class="card-img-top" src="./images/Money.jpg" alt="Card image cap">
-            <div class="card-body">
-              <h4 class="card-title">Financial App</h4>
-              <p class="card-text">Brief summary of what the project does.</p>
-            </div>
-            <ul class="list-group list-group-flush">
-              <li class="list-group-item">What did I use to build?</li>
-              <li class="list-group-item">Some other detail</li>
-            </ul>
-            <div class="card-body">
-              <a href="#" class="card-link">Link to project application</a>
-              <a href="#" class="card-link">Link to Blog re application development</a>
-            </div>
-          </div>
-        </div>
-    </div>
-    <div class="row justify-content-center" >
-      <div class="col-md-3">
-      <div class="card" style="width: 18rem;">
-        <img class="card-img-top" src="./images/Cybertron.jpg" alt="Card image cap">
-        <div class="card-body">
-          <h4 class="card-title">Cybertron</h4>
-          <p class="card-text">Brief summary of what the project does.</p>
-        </div>
-        <ul class="list-group list-group-flush">
-          <li class="list-group-item">What did I use to build?</li>
-          <li class="list-group-item">Some other detail</li>
-        </ul>
-        <div class="card-body">
-          <a href="#" class="card-link">Link to project application</a>
-          <a href="#" class="card-link">Link to Blog re application development</a>
-        </div>
-      </div>
-    </div>
-  </div>
+<section id="Portfolio">
+    
 </section>
 
 <!-- Contact -->
 <section id="Contact">
-  <h2>Let's Connect!</h2>
-  <hr>
-  <form>
-    <div class="row">
-      <div class="col-md-4">
-        <div class="row">
-          <label class="form-label">Name:</label> 
-          <input type="text" class="form-control" id="name" required>
-        </div>
-        <div class="row">
-          <label class="form-label">E-Mail:</label> 
-          <input type="email" class="form-control" id="email" required>
-        </div>
-        <div class="row">
-          <label class="form-label">Contact Number:</label> 
-          <input type="tel" class="form-control" id="name" placeholder="Optional">
-        </div>
-      </div>
-      <div class="col-md-4">
-        <label class="form-label">Message: </label> 
-        <textarea class="form-control" id="message" required></textarea>
-        <br>
-        <div class="d-flex justify-content-end">
-          <button type="submit" class="btn btn-primary">Send</button>
-        </div>
-      </div>
-    </div>
-  </form>
 
 </section>
 </main>
-<script src="https://smtpjs.com/v3/smtp.js"></script>
-<script src="./script.js"></script>
 
   <!-- Bootstrap -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
