@@ -1,12 +1,24 @@
 /* index */
 body {
     background-color: #525454;
+    color: #6C91BA;
 }
 
 /* navbar */
 #navbar {
     width: 30vh;
-    height: 100vh;    
+    height: 100vh;   
+    position: fixed; 
+
+    .name {
+        -webkit-text-stroke: 1px #6C91BA;
+        text-shadow:
+            3px 3px 0 #000,
+            -1px -1px 0 #000,  
+            1px -1px 0 #000,
+            -1px 1px 0 #000,
+            1px 1px 0 #000;
+    }
 
     .fName {
         text-align: left;
@@ -30,7 +42,114 @@ body {
 
     a {
         color:#6C91BA;
-       
+        align-items: center;
+        text-align: center;
     }
 
+    #links {
+        height: 40%;
+        .row {
+            padding: 5% 0;
+        }
+        .row:hover {
+            background-color: #877877;
+            #overlayText {
+                color: white;
+                display: block;
+            }
+            .show {
+                display: none;
+                transition: 0.5s linear;
+            }
+        }
+    }
+    
+    #overlayText {
+        display: none;
+    }
+
+    #copyright {
+        text-align: center;
+        color: #AAA;
+    }
+
+}
+
+/* Header */
+header {
+    background: url('/images//TempHeader.jpg') top center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    z-index: 1;
+    margin-left: 30vh;
+    opacity: 80%;
+}
+
+#heading {
+    margin-left: 30vh;
+    height: 90vh;
+    padding-top: 40vh;
+}
+
+#name {
+    text-align: center;
+    align-items: center;
+}
+
+/* About */
+#About {
+    margin-left: 30vh;
+}
+
+#first, #last {
+    background-color: #614D47;
+    border: solid black 2px;
+}
+
+#first, #second, #third, #last {
+     margin: 1rem;
+     padding: 1%;
+     padding-right: 3%;
+}
+
+.jumbotron {
+     color:#6C91BA;
+     text-align: center;
+     animation: jumbo 6s ease both infinite;
+     animation-delay: 2s;
+}
+
+@keyframes jumbo {
+     0% {
+         background-color: #525454;
+         color: #6C91BA;
+       }
+    50% {
+        background-color: #777F87;
+        color: black;
+    }    
+    100% {
+        background-color: #525454;
+        color: #6C91BA;
+    }
+}
+
+/* Skills */
+#Skills {
+    margin-left: 30vh;
+    
+    #languages {
+        justify-content: center;
+        text-align: center;
+    }
+}
+
+.card {
+    background-color:#877877;
+    color: black;
+}
+
+.card-img-top {
+    max-width: 100px;
+    max-height: 100px;
 }

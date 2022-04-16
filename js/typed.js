@@ -1,7 +1,7 @@
 //Header Typed Function
 //
 const textDisplay = document.getElementById('typed')
-const values = ['a Developer', 'a Problem Solver']
+const values = ['a Problem Solver', 'a Critical Thinker', 'a Developer']
 //
 let i = 0
 let j = 0

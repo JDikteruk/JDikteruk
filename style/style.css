@@ -1,12 +1,19 @@
 /* index */
 body {
   background-color: #525454;
+  color: #6C91BA;
 }
 
 /* navbar */
 #navbar {
   width: 30vh;
   height: 100vh;
+  position: fixed;
+}
+
+#navbar .name {
+  -webkit-text-stroke: 1px #6C91BA;
+  text-shadow: 3px 3px 0 #000, -1px -1px 0 #000,   1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
 }
 
 #navbar .fName {
@@ -32,5 +39,141 @@ body {
 
 #navbar a {
   color: #6C91BA;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+}
+
+#navbar #links {
+  height: 40%;
+}
+
+#navbar #links .row {
+  padding: 5% 0;
+}
+
+#navbar #links .row:hover {
+  background-color: #877877;
+}
+
+#navbar #links .row:hover #overlayText {
+  color: white;
+  display: block;
+}
+
+#navbar #links .row:hover .show {
+  display: none;
+  -webkit-transition: 0.5s linear;
+  transition: 0.5s linear;
+}
+
+#navbar #overlayText {
+  display: none;
+}
+
+#navbar #copyright {
+  text-align: center;
+  color: #AAA;
+}
+
+/* Header */
+header {
+  background: url("/images//TempHeader.jpg") top center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  z-index: 1;
+  margin-left: 30vh;
+  opacity: 80%;
+}
+
+#heading {
+  margin-left: 30vh;
+  height: 90vh;
+  padding-top: 40vh;
+}
+
+#name {
+  text-align: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+/* About */
+#About {
+  margin-left: 30vh;
+}
+
+#first, #last {
+  background-color: #614D47;
+  border: solid black 2px;
+}
+
+#first, #second, #third, #last {
+  margin: 1rem;
+  padding: 1%;
+  padding-right: 3%;
+}
+
+.jumbotron {
+  color: #6C91BA;
+  text-align: center;
+  -webkit-animation: jumbo 6s ease both infinite;
+          animation: jumbo 6s ease both infinite;
+  -webkit-animation-delay: 2s;
+          animation-delay: 2s;
+}
+
+@-webkit-keyframes jumbo {
+  0% {
+    background-color: #525454;
+    color: #6C91BA;
+  }
+  50% {
+    background-color: #777F87;
+    color: black;
+  }
+  100% {
+    background-color: #525454;
+    color: #6C91BA;
+  }
+}
+
+@keyframes jumbo {
+  0% {
+    background-color: #525454;
+    color: #6C91BA;
+  }
+  50% {
+    background-color: #777F87;
+    color: black;
+  }
+  100% {
+    background-color: #525454;
+    color: #6C91BA;
+  }
+}
+
+/* Skills */
+#Skills {
+  margin-left: 30vh;
+}
+
+#Skills #languages {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-align: center;
+}
+
+.card {
+  background-color: #877877;
+  color: black;
+}
+
+.card-img-top {
+  max-width: 100px;
+  max-height: 100px;
 }
 /*# sourceMappingURL=style.css.map */
