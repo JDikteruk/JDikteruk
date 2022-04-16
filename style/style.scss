@@ -1,0 +1,36 @@
+/* index */
+body {
+    background-color: #525454;
+}
+
+/* navbar */
+#navbar {
+    width: 30vh;
+    height: 100vh;    
+
+    .fName {
+        text-align: left;
+    }
+    .lName {
+        text-align: right;
+    }
+
+    .pronounce {
+        text-align: center;
+    }
+
+    img{
+        text-align: center;
+        margin: 2vh;    
+        height: auto;
+        width: 70%;
+        border: solid #6C91BA;
+        border-radius: 25%;
+    }
+
+    a {
+        color:#6C91BA;
+       
+    }
+
+}

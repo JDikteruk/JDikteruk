@@ -1,7 +1,5 @@
 //Header Typed Function
 //
-//content="a Developer,a Problem Solver"
-//
 const textDisplay = document.getElementById('typed')
 const values = ['a Developer', 'a Problem Solver']
 //
