@@ -24,6 +24,7 @@ body {
 }
 
 /* navbar */
+/*===============================================================================================================================*/
 #navbar {
     background-color: #414343;
     width: 30vh;
@@ -96,6 +97,7 @@ body {
 }
 
 /* Header */
+/*===============================================================================================================================*/
 header {
     background: url('/images//TempHeader.jpg') top center;
     background-size: contain;
@@ -107,8 +109,8 @@ header {
 
 #heading {
     margin-left: 30vh;
-    height: 90vh;
     padding-top: 40vh;
+    height: 80vh;
 }
 
 #name {
@@ -117,42 +119,58 @@ header {
 }
 
 /* About */
+/*===============================================================================================================================*/
 #About {
     margin-left: 30vh;
 }
 
 #first, #last {
     background-color: #614D47;
-    border: solid black 2px;
 }
 
 #first, #second, #third, #last {
      margin: 1rem;
      padding: 1%;
      padding-right: 3%;
+     border: solid black 2px;
 }
 
 .jumbotron {
     border-radius: 25px;
-     color:#6C91BA;
-     text-align: center;
-     animation: jumbo 10s ease forwards infinite;
-     animation-delay: 2s;
+    color:#6C91BA;
+    text-align: center;
+    animation: jumbo 8s ease forwards infinite;
+    animation-delay: 2s;
+    height: 20vh;
 }
 
 @keyframes jumbo {
-     0% {
+     0%, 100% {
          background-color: #525454;
          color: #6C91BA;
        }
-    50% {
+    33%, 66% {
         background-color: #777F87;
         color: black;
     }    
-    100% {
-        background-color: #525454;
-        color: #6C91BA;
+}
+
+#fader {
+    animation: switch 8s ease forwards infinite;
+}
+
+@keyframes switch {
+    0%{
+        opacity: 0;
     }
+    10%{
+        opacity: 1;
+    }
+}
+
+
+#About {
+    text-align: justify;
 }
 
 #knowMore {
@@ -163,7 +181,17 @@ header {
     list-style-type: none;
 }
 
+#plum, #UoT {
+    max-width: 80%;
+}
+#plum {
+    margin-top: 40%;
+    max-height: 50%;
+}
+
+
 /* Thor */
+/*===============================================================================================================================*/
 .slideshow-container {
     text-align: center;
     margin-left: 30vh;
@@ -183,33 +211,88 @@ header {
   }
   
   /* Fading animation */
-  .fade {
-    animation-name: fade;
+  .flip {
+    animation-name: flip;
     animation-duration: 2s;
   }
   
-  @keyframes fade {
-    from {opacity: .3}
+  @keyframes flip {
+    from {opacity: 0.2}
     to {opacity: 1}
   }
 
 
+  /**************************************************************************************************************************/
+/* The flip box container - set the width and height to whatever you want. We have added the border property to demonstrate that the flip itself goes out of the box on hover (remove perspective if you don't want the 3D effect */
+.flip-box {
+    background-color: transparent;
+    width: 300px;
+    height: 200px;
+    border: 1px solid #f1f1f1;
+    perspective: 1000px; /* Remove this if you don't want the 3D effect */
+  }
+  
+  /* This container is needed to position the front and back side */
+  .flip-box-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+  }
+  
+  /* Do an horizontal flip when you move the mouse over the flip box container */
+  .flip-box:hover .flip-box-inner {
+    transform: rotateY(180deg);
+  }
+  
+  /* Position the front and back side */
+  .flip-box-front, .flip-box-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden; /* Safari */
+    backface-visibility: hidden;
+  }
+  
+  /* Style the front side (fallback if image is missing) */
+  .flip-box-front {
+    background-color: #bbb;
+    color: black;
+  }
+  
+  /* Style the back side */
+  .flip-box-back {
+    background-color: dodgerblue;
+    color: white;
+    transform: rotateY(180deg);
+  }
+
 /* Skills */
+/*===============================================================================================================================*/
 #Skills {
     margin-left: 30vh;
     
     #languages {
-        justify-content: center;
-        text-align: center;
+        align-items: center;
+        text-align: left;
     }
 }
 
 .card {
     background-color:#877877;
     color: black;
+    padding: 10px;
 }
 
 .card-img-top {
-    max-width: 100px;
+    align-self: center;
     max-height: 100px;
+    width: auto;
+}
+/* Contact */
+/*===============================================================================================================================*/
+form {
+    background-color: #877877;
 }
