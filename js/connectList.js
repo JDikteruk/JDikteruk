@@ -1,7 +1,12 @@
 //About Fader Function
 //
 const textDisplay = document.getElementById('fader')
-const connectVal = ["You should see my resume!", "Connect with me on LinkedIn!", "Send me a message right now!", "Continue reading. Let's connect afterwards."]
+const connectVal = [
+    "<a href='#' target='_blank'>You should see my resume!</a>", 
+    "<a href='https://www.linkedin.com/in/jonathandikteruk' target='_blank'>Connect with me on LinkedIn!</a>", 
+    "<a href='#Contact'>Send me a message right now!</a>", 
+    "Continue reading. Let's connect afterwards."
+]
 //
 let i = 0
 let currentFader = []
