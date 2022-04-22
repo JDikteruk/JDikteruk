@@ -1,11 +1,11 @@
 //About Fader Function
 //
-const textDisplay = document.getElementById('fader')
+const textDisplay = document.getElementById('fade')
 const connectVal = [
-    "<a href='#' target='_blank'>You should see my resume!</a>", 
-    "<a href='https://www.linkedin.com/in/jonathandikteruk' target='_blank'>Connect with me on LinkedIn!</a>", 
-    "<a href='#Contact'>Send me a message right now!</a>", 
-    "Continue reading. Let's connect afterwards."
+    "<a id='fader' href='#' target='_blank'>You should see my resume!</a>", 
+    "<a id='fader' href='https://www.linkedin.com/in/jonathandikteruk' target='_blank'>Connect with me on LinkedIn!</a>", 
+    "<a id='fader' href='#Contact'>Send me a message right now!</a>", 
+    "<span id='fader'>Continue reading. Let's connect afterwards.</span>"
 ]
 //
 let i = 0
@@ -22,7 +22,7 @@ function fader () {
     if (i == connectVal.length) {
         i=0
     }
-    const time = 8000
+    const time = 12000
     setTimeout(fader, time)
 }
 //

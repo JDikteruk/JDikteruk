@@ -21,7 +21,7 @@ body {
     background-color: #525454;
     color: #6C91BA;
     font-family: 'Changa', sans-serif;
-    padding: 1%;
+    max-width: 95vw;
 }
 
 /* navbar */
@@ -31,6 +31,7 @@ body {
     width: 30vh;
     height: 100vh;   
     position: fixed; 
+    margin: 0;
 
     .name {
         -webkit-text-stroke: 1px #6C91BA;
@@ -100,7 +101,7 @@ body {
 /* Header */
 /*===============================================================================================================================*/
 header {
-    background: url('/images//TempHeader.jpg') top center;
+    background: url('/images/TempHeader.jpg') top center;
     background-size: contain;
     background-repeat: no-repeat;
     z-index: 1;
@@ -136,42 +137,33 @@ header {
      border: solid black 2px;
 }
 
-.jumbotron {
+.jumbotron{
     border-radius: 25px;
     color:#6C91BA;
     text-align: center;
-    animation: jumbo 8s ease forwards infinite;
-    animation-delay: 2s;
     height: 20vh;
-
-    a {
-        color:#6C91BA;
-    }
+    animation: jumbo 12s ease forwards infinite;
 }
 
 @keyframes jumbo {
-     0%, 100% {
+    0%, 100% {
          background-color: #525454;
          color: #6C91BA;
+         opacity: 0;
        }
-    33%, 66% {
+    25%, 75% {
+        opacity: 1;
+    }
+    50% {
         background-color: #777F87;
         color: black;
     }    
 }
 
 #fader {
-    animation: switch 8s ease forwards infinite;
+    animation: jumbo 12s ease forwards infinite;
 }
 
-@keyframes switch {
-    0%{
-        opacity: 0;
-    }
-    10%{
-        opacity: 1;
-    }
-}
 
 
 #About {
@@ -223,32 +215,19 @@ header {
 
     img {
         width: auto;
-        height: 30vh;
-        
+        height: 50vh;
     }
   }
-  
-  .mySlides {
-      animation-name: fade;
-      animation-duration: 4s;
+
+  .mySlides img {
+    animation-name: zoomies;
+    animation-duration: 6s;
   }
 
-  @keyframes fade {
-      0% {opacity: 0;}
-      20% {opacity: 1;}
-      80% {opacity: 1;}
-      100% {opacity: 0;}
+  @keyframes zoomies {
+      0%, 100% {transform: scale(0);}
+      10%, 90% {transform: scale(1);}
       
-  }
-
-  /**************************************************************************************************************************/
-/* The flip box container - set the width and height to whatever you want. We have added the border property to demonstrate that the flip itself goes out of the box on hover (remove perspective if you don't want the 3D effect */
-.flip-box {
-    background-color: transparent;
-    width: 300px;
-    height: 200px;
-    border: 1px solid #f1f1f1;
-    perspective: 1000px; /* Remove this if you don't want the 3D effect */
   }
   
   /* This container is needed to position the front and back side */
@@ -261,53 +240,53 @@ header {
     transform-style: preserve-3d;
   }
   
-  /* Do an horizontal flip when you move the mouse over the flip box container */
-  .flip-box:hover .flip-box-inner {
-    transform: rotateY(180deg);
-  }
   
-  /* Position the front and back side */
-  .flip-box-front, .flip-box-back {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    -webkit-backface-visibility: hidden; /* Safari */
-    backface-visibility: hidden;
-  }
   
-  /* Style the front side (fallback if image is missing) */
-  .flip-box-front {
-    background-color: #bbb;
-    color: black;
-  }
-  
-  /* Style the back side */
-  .flip-box-back {
-    background-color: dodgerblue;
-    color: white;
-    transform: rotateY(180deg);
-  }
 
 /* Skills */
 /*===============================================================================================================================*/
 #Skills {
     margin-left: 30vh;
 
-    .card {
+    /* Position the front and back side */
+  .flip-box-front, .flip-box-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    padding: 1%;
+  }
+
+    .flip-box {
+        width: 300px;
+        height: 200px;
         margin: 5%;
-        background-color:#877877;
         color: black;
-        padding: 10px;
+        padding: 5%;
+        background-color: transparent;
+        border: 1px solid #f1f1f1;
+        perspective: 1000px;
 
-        .card-img-top {
+        .flip-box-front-img {
+            vertical-align: middle;
             align-self: center;
-            max-height: 100px;
-            width: auto;
+            max-height: 100%;
+            max-width: 100%;
         }
 
-        .list-group-item {
-            background-color: #877877;
+        .flip-box-back {
+            background-color:#877877;
+            transform: rotateY(180deg);
+
+            .li {
+                text-align: left;
+            }
         }
+    }
+
+    .flip-box:hover .flip-box-inner {
+        transform: rotateY(180deg);
     }
 
     #languages {
@@ -323,6 +302,58 @@ header {
 
 /* Contact */
 /*===============================================================================================================================*/
+#letsConnect {
+    margin-left: 30vh;
+}
+
 form {
-    background-color: #877877;
+    background-color: #614D47;
+    max-width: 60vw;
+    position: fixed;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 100%;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 0 20px #000;
+
+    textarea {
+        height: 180px;
+        resize: none;
+    }
+}
+
+.input-fields, .msg {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+}
+
+.input, textarea {
+    margin: 3%;
+    background: transparent;
+    border: 0;
+    border-bottom: solid 2px #6C91BA;
+}
+
+#btnSend {
+    text-align: center;
+}
+.btn {
+    color: #6C91BA;
+    padding: 2%;
+    width: 20%;
+    border-radius: 20px;
+}
+
+.btn:hover {
+    background-color: #777F87;
+    color: #000;
+    transition: 0.3 ease;
+}
+
+.input:focus, textarea:focus {
+    transform: scale(1.2);
+    transition: 0.2s ease;
 }

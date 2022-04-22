@@ -20,7 +20,7 @@ body {
   background-color: #525454;
   color: #6C91BA;
   font-family: 'Changa', sans-serif;
-  padding: 1%;
+  max-width: 95vw;
 }
 
 /* navbar */
@@ -30,6 +30,7 @@ body {
   width: 30vh;
   height: 100vh;
   position: fixed;
+  margin: 0;
 }
 
 #navbar .name {
@@ -101,7 +102,7 @@ body {
 /* Header */
 /*===============================================================================================================================*/
 header {
-  background: url("/images//TempHeader.jpg") top center;
+  background: url("/images/TempHeader.jpg") top center;
   background-size: contain;
   background-repeat: no-repeat;
   z-index: 1;
@@ -143,23 +144,21 @@ header {
   border-radius: 25px;
   color: #6C91BA;
   text-align: center;
-  -webkit-animation: jumbo 8s ease forwards infinite;
-          animation: jumbo 8s ease forwards infinite;
-  -webkit-animation-delay: 2s;
-          animation-delay: 2s;
   height: 20vh;
-}
-
-.jumbotron a {
-  color: #6C91BA;
+  -webkit-animation: jumbo 12s ease forwards infinite;
+          animation: jumbo 12s ease forwards infinite;
 }
 
 @-webkit-keyframes jumbo {
   0%, 100% {
     background-color: #525454;
     color: #6C91BA;
+    opacity: 0;
   }
-  33%, 66% {
+  25%, 75% {
+    opacity: 1;
+  }
+  50% {
     background-color: #777F87;
     color: black;
   }
@@ -169,34 +168,20 @@ header {
   0%, 100% {
     background-color: #525454;
     color: #6C91BA;
+    opacity: 0;
   }
-  33%, 66% {
+  25%, 75% {
+    opacity: 1;
+  }
+  50% {
     background-color: #777F87;
     color: black;
   }
 }
 
 #fader {
-  -webkit-animation: switch 8s ease forwards infinite;
-          animation: switch 8s ease forwards infinite;
-}
-
-@-webkit-keyframes switch {
-  0% {
-    opacity: 0;
-  }
-  10% {
-    opacity: 1;
-  }
-}
-
-@keyframes switch {
-  0% {
-    opacity: 0;
-  }
-  10% {
-    opacity: 1;
-  }
+  -webkit-animation: jumbo 12s ease forwards infinite;
+          animation: jumbo 12s ease forwards infinite;
 }
 
 #About {
@@ -249,56 +234,36 @@ header {
 
 .slideshow-container img {
   width: auto;
-  height: 30vh;
+  height: 50vh;
 }
 
-.mySlides {
-  -webkit-animation-name: fade;
-          animation-name: fade;
-  -webkit-animation-duration: 4s;
-          animation-duration: 4s;
+.mySlides img {
+  -webkit-animation-name: zoomies;
+          animation-name: zoomies;
+  -webkit-animation-duration: 6s;
+          animation-duration: 6s;
 }
 
-@-webkit-keyframes fade {
-  0% {
-    opacity: 0;
+@-webkit-keyframes zoomies {
+  0%, 100% {
+    -webkit-transform: scale(0);
+            transform: scale(0);
   }
-  20% {
-    opacity: 1;
-  }
-  80% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 0;
+  10%, 90% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
   }
 }
 
-@keyframes fade {
-  0% {
-    opacity: 0;
+@keyframes zoomies {
+  0%, 100% {
+    -webkit-transform: scale(0);
+            transform: scale(0);
   }
-  20% {
-    opacity: 1;
+  10%, 90% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
   }
-  80% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 0;
-  }
-}
-
-/**************************************************************************************************************************/
-/* The flip box container - set the width and height to whatever you want. We have added the border property to demonstrate that the flip itself goes out of the box on hover (remove perspective if you don't want the 3D effect */
-.flip-box {
-  background-color: transparent;
-  width: 300px;
-  height: 200px;
-  border: 1px solid #f1f1f1;
-  -webkit-perspective: 1000px;
-          perspective: 1000px;
-  /* Remove this if you don't want the 3D effect */
 }
 
 /* This container is needed to position the front and back side */
@@ -315,59 +280,56 @@ header {
           transform-style: preserve-3d;
 }
 
-/* Do an horizontal flip when you move the mouse over the flip box container */
-.flip-box:hover .flip-box-inner {
-  -webkit-transform: rotateY(180deg);
-          transform: rotateY(180deg);
-}
-
-/* Position the front and back side */
-.flip-box-front, .flip-box-back {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  -webkit-backface-visibility: hidden;
-  /* Safari */
-  backface-visibility: hidden;
-}
-
-/* Style the front side (fallback if image is missing) */
-.flip-box-front {
-  background-color: #bbb;
-  color: black;
-}
-
-/* Style the back side */
-.flip-box-back {
-  background-color: dodgerblue;
-  color: white;
-  -webkit-transform: rotateY(180deg);
-          transform: rotateY(180deg);
-}
-
 /* Skills */
 /*===============================================================================================================================*/
 #Skills {
   margin-left: 30vh;
+  /* Position the front and back side */
 }
 
-#Skills .card {
+#Skills .flip-box-front, #Skills .flip-box-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  padding: 1%;
+}
+
+#Skills .flip-box {
+  width: 300px;
+  height: 200px;
   margin: 5%;
-  background-color: #877877;
   color: black;
-  padding: 10px;
+  padding: 5%;
+  background-color: transparent;
+  border: 1px solid #f1f1f1;
+  -webkit-perspective: 1000px;
+          perspective: 1000px;
 }
 
-#Skills .card .card-img-top {
+#Skills .flip-box .flip-box-front-img {
+  vertical-align: middle;
   -ms-flex-item-align: center;
       -ms-grid-row-align: center;
       align-self: center;
-  max-height: 100px;
-  width: auto;
+  max-height: 100%;
+  max-width: 100%;
 }
 
-#Skills .card .list-group-item {
+#Skills .flip-box .flip-box-back {
   background-color: #877877;
+  -webkit-transform: rotateY(180deg);
+          transform: rotateY(180deg);
+}
+
+#Skills .flip-box .flip-box-back .li {
+  text-align: left;
+}
+
+#Skills .flip-box:hover .flip-box-inner {
+  -webkit-transform: rotateY(180deg);
+          transform: rotateY(180deg);
 }
 
 #Skills #languages {
@@ -381,7 +343,75 @@ header {
 /*===============================================================================================================================*/
 /* Contact */
 /*===============================================================================================================================*/
+#letsConnect {
+  margin-left: 30vh;
+}
+
 form {
-  background-color: #877877;
+  background-color: #614D47;
+  max-width: 60vw;
+  position: fixed;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  width: 100%;
+  padding: 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-shadow: 0 0 20px #000;
+          box-shadow: 0 0 20px #000;
+}
+
+form textarea {
+  height: 180px;
+  resize: none;
+}
+
+.input-fields, .msg {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 80%;
+}
+
+.input, textarea {
+  margin: 3%;
+  background: transparent;
+  border: 0;
+  border-bottom: solid 2px #6C91BA;
+}
+
+#btnSend {
+  text-align: center;
+}
+
+.btn {
+  color: #6C91BA;
+  padding: 2%;
+  width: 20%;
+  border-radius: 20px;
+}
+
+.btn:hover {
+  background-color: #777F87;
+  color: #000;
+  -webkit-transition: 0.3 ease;
+  transition: 0.3 ease;
+}
+
+.input:focus, textarea:focus {
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+  -webkit-transition: 0.2s ease;
+  transition: 0.2s ease;
 }
 /*# sourceMappingURL=style.css.map */
