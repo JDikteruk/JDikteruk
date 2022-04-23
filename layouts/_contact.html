@@ -18,6 +18,16 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
   <link href="https://fonts.googleapis.com/css2?family=Changa:wght@300;400&family=El+Messiri&family=Encode+Sans+SC:wght@300;400&family=Genos:ital,wght@0,300;0,400;1,300;1,400&family=Jura:wght@300;400&family=Maven+Pro&family=Montserrat:ital,wght@0,300;0,400;1,300;1,400&family=MuseoModerno:wght@300;400&family=Oxanium:wght@300;400&family=Red+Hat+Display:ital,wght@0,300;0,400;1,300;1,400&family=Red+Rose:wght@300;400&family=Rosario:ital,wght@0,300;0,400;1,300;1,400&family=Saira:ital,wght@0,300;0,400;1,300;1,400&family=Source+Code+Pro:ital,wght@0,300;0,400;1,300;1,400&family=Space+Grotesk:wght@300;400&display=swap" rel="stylesheet">
 
+  <!-- E-Mail script -->
+  <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
+  </script>
+  <script type="text/javascript">
+    (function(){
+        emailjs.init("78atDX-JPYeaBiwWB");
+    })();
+  </script>
+
 </head>
   <body>
 
@@ -31,26 +41,28 @@
         <div class="row">
           <div class="col-md-6">
             <div class="input-fields">
-              <input type="text" class="input" placeholder="Name">
-              <input type="text" class="input" placeholder="Company">
-              <input type="text" class="input" placeholder="Phone">
-              <input type="text" class="input" placeholder="E-Mail">
+              <input id="nameInput" type="text" class="input" placeholder="Name">
+              <input id="company" type="text" class="input" placeholder="Company">
+              <input id="phone" type="text" class="input" placeholder="Phone">
+              <input id="email" type="text" class="input" placeholder="E-Mail">
             </div>
           </div>
           <div class="col-md-6">
             <div class="msg">
-              <textarea placeholder="Message"></textarea>
+              <textarea id="msg" placeholder="Message"></textarea>
             </div>
           </div>
         </div>
         <div class="row">
           <div id="btnSend" class="col-md-12">
-            <div class="btn">Send</div>
+            <div class="btn" onclick="sendEmail()">Send</div>
           </div>
         </div>
       </form>
     </div>
 
+    <!-- E-Mail -->
+    <script src="/js/email.js"></script>
     <!-- Bootstrap -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 
