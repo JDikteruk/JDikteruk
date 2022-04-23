@@ -1,11 +1,11 @@
 //About Fader Function
 //
-const textDisplay = document.getElementById('fade')
+const textDisplay = document.getElementById('fader')
 const connectVal = [
-    "<a id='fader' href='#' target='_blank'>You should see my resume!</a>", 
-    "<a id='fader' href='https://www.linkedin.com/in/jonathandikteruk' target='_blank'>Connect with me on LinkedIn!</a>", 
-    "<a id='fader' href='#Contact'>Send me a message right now!</a>", 
-    "<span id='fader'>Continue reading. Let's connect afterwards.</span>"
+    "<a class='lead' href='#' target='_blank'>You should see my resume!</a>", 
+    "<a class='lead' href='https://www.linkedin.com/in/jonathandikteruk' target='_blank'>Connect with me on LinkedIn!</a>", 
+    "<a class='lead' href='#Contact'>Send me a message right now!</a>", 
+    "<span class='lead' >Continue reading. Let's connect afterwards.</span>"
 ]
 //
 let i = 0
