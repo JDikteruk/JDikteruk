@@ -9,9 +9,8 @@ function sendEmail (){
 
     emailjs.send('service_2cs2j5q','template_qpszt7m', tempParams)
     .then(
-        function(res){
-            console.log(res.status);
-     })
-
-    
+        function () {
+            window.location.href = '/layouts/thankyou.html';
+        }
+     )
 }
