@@ -1,0 +1,124 @@
+#About {
+    margin-left: 30vh;
+}
+
+#first, #last {
+    background-color: #614D47;
+}
+
+#first, #second, #third, #last {
+     margin: 1rem;
+     padding: 1%;
+     padding-right: 3%;
+     border: solid black 2px;
+}
+
+.jumbotron{
+    border-radius: 25px;
+    color:#6C91BA;
+    text-align: center;
+    height: 20vh;
+    animation: jumbo 12s ease forwards infinite;
+}
+
+.lead, .lead:hover {
+    color: black;
+    animation: leadAnimate 12s ease forwards infinite;
+}
+
+@keyframes jumbo {
+    0%, 100% {
+         background-color: #525454;
+         color: #6C91BA;
+         opacity: 0;
+       }
+    25%, 90% {
+        opacity: 1;
+    }
+    50% {
+        background-color: #777F87;
+        color: black;
+    }    
+}
+
+@keyframes leadAnimate {
+    0%, 100% {
+        color: #6C91BA;
+         opacity: 0;
+    }
+    25%, 90% {
+        opacity: 1;
+    }
+    50% {
+        color: black;
+    } 
+    
+}
+
+#About {
+    text-align: justify;
+}
+
+#knowMore {
+    margin: 5%;
+}
+
+#workStyle {
+    height: 40vh;
+}
+
+.listItem {
+    list-style-type: '\2714';
+}
+
+#workAssessment {
+    background-color: #6C91BA;
+    color: #614D47;
+    margin: 5px;
+    border: solid;
+    border-radius: 30px;
+    border-color: #000;
+    padding: 5px;
+    text-align: center;
+    height: 20vh;
+    max-width: 20vw;
+}
+
+#UoT{
+    max-height: 8vh;
+}
+
+#plum {
+    margin-top: 2.5%;
+    max-height: 16vh;
+}
+
+#passion {
+    margin-top: 30vh;
+}
+
+/* Thor */
+/*===============================================================================================================================*/
+.slideshow-container {
+    text-align: center;
+    margin-left: 30vh;
+    max-width: 1000px;
+    position: relative;
+    margin: auto;
+
+    img {
+        width: auto;
+        height: 50vh;
+    }
+  }
+
+  .mySlides img {
+    animation-name: zoomies;
+    animation-duration: 6s;
+  }
+
+  @keyframes zoomies {
+      0%, 100% {transform: scale(0);}
+      10%, 90% {transform: scale(1);}
+      
+  }

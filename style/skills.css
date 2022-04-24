@@ -1,0 +1,83 @@
+#Skills {
+  margin-left: 30vh;
+  /* Position the front and back side */
+}
+
+#Skills .flip-box-front, #Skills .flip-box-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  padding: 1%;
+}
+
+#Skills .flip-box {
+  width: auto;
+  height: 250px;
+  margin: 5%;
+  color: black;
+  padding: 5%;
+  background-color: transparent;
+  border: 1px solid #f1f1f1;
+  border-radius: 10px;
+  -webkit-perspective: 1000px;
+          perspective: 1000px;
+}
+
+#Skills .flip-box .flip-box-front-img {
+  max-height: 100%;
+  max-width: 100%;
+}
+
+#Skills .flip-box .flip-box-back {
+  background-color: #877877;
+  -webkit-transform: rotateY(180deg);
+          transform: rotateY(180deg);
+  text-align: left;
+  border-radius: 10px;
+}
+
+#Skills .flip-box .flip-box-back .li {
+  text-align: left;
+}
+
+#Skills .flip-box:hover .flip-box-inner {
+  -webkit-transform: rotateY(180deg);
+          transform: rotateY(180deg);
+}
+
+#Skills #skill {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: left;
+}
+
+#Skills #webAppRow {
+  margin-top: 5%;
+}
+
+#Skills #webApp {
+  height: 100%;
+  width: 45%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 2%;
+}
+
+/* This container is needed to position the front and back side */
+.flip-box-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  -webkit-transition: -webkit-transform 0.8s;
+  transition: -webkit-transform 0.8s;
+  transition: transform 0.8s;
+  transition: transform 0.8s, -webkit-transform 0.8s;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+}
+/*# sourceMappingURL=skills.css.map */

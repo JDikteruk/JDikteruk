@@ -1,0 +1,74 @@
+#navbar {
+  background-color: #414343;
+  width: 30vh;
+  height: 100vh;
+  position: fixed;
+  margin: 0;
+}
+
+#navbar .name {
+  -webkit-text-stroke: 1px #6C91BA;
+  text-shadow: 3px 3px 0 #000, -1px -1px 0 #000,   1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+}
+
+#navbar .fName {
+  text-align: left;
+}
+
+#navbar .lName {
+  text-align: right;
+}
+
+#navbar .pronounce {
+  text-align: center;
+}
+
+#navbar img {
+  text-align: center;
+  margin: 2vh;
+  height: auto;
+  width: 70%;
+  border: solid #6C91BA;
+  border-radius: 25%;
+}
+
+#navbar #link {
+  color: #6C91BA;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+}
+
+#navbar #links {
+  height: 40%;
+}
+
+#navbar #links .row {
+  padding: 5% 0;
+}
+
+#navbar #links #link:hover {
+  background-color: #877877;
+}
+
+#navbar #links #link:hover #overlayText {
+  color: white;
+  display: block;
+}
+
+#navbar #links #link:hover .show {
+  display: none;
+  -webkit-transition: 0.5s linear;
+  transition: 0.5s linear;
+}
+
+#navbar #overlayText {
+  display: none;
+}
+
+#navbar #copyright {
+  text-align: center;
+  color: #AAA;
+}
+/*# sourceMappingURL=navbar.css.map */

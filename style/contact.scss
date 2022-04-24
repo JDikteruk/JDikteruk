@@ -1,0 +1,69 @@
+#Contact {
+    margin-left: 30vh;
+    height: 100vh;
+}
+
+#letsConnect {
+    margin-top: 5vh;
+    display: flex;
+    justify-content: left;
+}
+
+#contact-form {
+    display: flex;
+    justify-content: center;
+}
+
+form {
+    display: flex;
+    justify-content: center;
+    margin-top: 30vh;
+    background-color: #614D47;
+    max-width: 60vw;
+    top: 50%;
+    width: 100%;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 0 20px #000;
+
+    textarea {
+        height: 180px;
+        resize: none;
+    }
+}
+
+.input-fields, .msg {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+}
+
+.input, textarea {
+    margin: 3%;
+    background: transparent;
+    border: 0;
+    border-bottom: solid 2px #6C91BA;
+}
+
+#btnSend {
+    text-align: center;
+}
+.btn {
+    color: #6C91BA;
+    padding: 2%;
+    width: 20%;
+    border-radius: 20px;
+}
+
+.btn:hover {
+    background-color: #777F87;
+    color: #000;
+    transition: 0.5 ease;
+}
+
+
+.input:focus, textarea:focus {
+    transform: scale(1.2);
+    transition: 0.2s ease;
+}

@@ -1,0 +1,94 @@
+#Contact {
+  margin-left: 30vh;
+  height: 100vh;
+}
+
+#letsConnect {
+  margin-top: 5vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: left;
+      -ms-flex-pack: left;
+          justify-content: left;
+}
+
+#contact-form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-top: 30vh;
+  background-color: #614D47;
+  max-width: 60vw;
+  top: 50%;
+  width: 100%;
+  padding: 30px;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-shadow: 0 0 20px #000;
+          box-shadow: 0 0 20px #000;
+}
+
+form textarea {
+  height: 180px;
+  resize: none;
+}
+
+.input-fields, .msg {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 80%;
+}
+
+.input, textarea {
+  margin: 3%;
+  background: transparent;
+  border: 0;
+  border-bottom: solid 2px #6C91BA;
+}
+
+#btnSend {
+  text-align: center;
+}
+
+.btn {
+  color: #6C91BA;
+  padding: 2%;
+  width: 20%;
+  border-radius: 20px;
+}
+
+.btn:hover {
+  background-color: #777F87;
+  color: #000;
+  -webkit-transition: 0.5 ease;
+  transition: 0.5 ease;
+}
+
+.input:focus, textarea:focus {
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+  -webkit-transition: 0.2s ease;
+  transition: 0.2s ease;
+}
+/*# sourceMappingURL=contact.css.map */
