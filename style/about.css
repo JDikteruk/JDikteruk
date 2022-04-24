@@ -1,5 +1,6 @@
 #About {
   margin-left: 30vh;
+  text-align: justify;
 }
 
 #first, #last {
@@ -22,7 +23,7 @@
           animation: jumbo 12s ease forwards infinite;
 }
 
-.lead, .lead:hover {
+.jumbotron .lead, .jumbotron .lead:hover {
   color: black;
   -webkit-animation: leadAnimate 12s ease forwards infinite;
           animation: leadAnimate 12s ease forwards infinite;
@@ -84,16 +85,19 @@
   }
 }
 
-#About {
-  text-align: justify;
-}
-
 #knowMore {
   margin: 5%;
 }
 
 #workStyle {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   height: 40vh;
+}
+
+#workStyle img {
+  max-width: 30vh;
 }
 
 .listItem {

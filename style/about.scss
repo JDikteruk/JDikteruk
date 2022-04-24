@@ -1,5 +1,6 @@
 #About {
     margin-left: 30vh;
+    text-align: justify;
 }
 
 #first, #last {
@@ -19,11 +20,10 @@
     text-align: center;
     height: 20vh;
     animation: jumbo 12s ease forwards infinite;
-}
-
-.lead, .lead:hover {
-    color: black;
-    animation: leadAnimate 12s ease forwards infinite;
+    .lead, .lead:hover {
+        color: black;
+        animation: leadAnimate 12s ease forwards infinite;
+    }
 }
 
 @keyframes jumbo {
@@ -55,16 +55,17 @@
     
 }
 
-#About {
-    text-align: justify;
-}
-
 #knowMore {
     margin: 5%;
 }
 
 #workStyle {
+    display: flex;
     height: 40vh;
+
+    img {
+        max-width: 30vh;
+    }
 }
 
 .listItem {

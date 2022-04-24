@@ -1,6 +1,6 @@
 //About Fader Function
 //
-const textDisplay = document.getElementById('fader')
+const display = document.getElementById('fader')
 const connectVal = [
     "<a class='lead' href='/assets/Jonathan Dikteruk Resume 22.pdf' target='_blank'>You should see my resume!</a>", 
     "<a class='lead' href='https://www.linkedin.com/in/jonathandikteruk' target='_blank'>Connect with me on LinkedIn!</a>", 
@@ -8,19 +8,19 @@ const connectVal = [
     "<span class='lead' ><u>Continue reading. Let's connect afterwards.</u></span>"
 ]
 //
-let i = 0
+let n = 0
 let currentFader = []
 let isDone = false
 //
 function fader () {
     isDone=false
-    if (i < connectVal.length) {
-        currentFader.push(connectVal[i])
-        textDisplay.innerHTML = currentFader[i]
-        i++
+    if (n < connectVal.length) {
+        currentFader.push(connectVal[n])
+        display.innerHTML = currentFader[n]
+        n++
     }
-    if (i == connectVal.length) {
-        i=0
+    if (n == connectVal.length) {
+        n=0
     }
     const time = 12000
     setTimeout(fader, time)
