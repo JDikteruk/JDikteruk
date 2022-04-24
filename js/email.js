@@ -8,7 +8,10 @@ function sendEmail (){
     };
 
     emailjs.send('service_2cs2j5q','template_qpszt7m', tempParams)
-    .then(function(res){
-        console.log(res.status);
-    })
+    .then(
+        function(res){
+            console.log(res.status);
+     })
+
+    
 }

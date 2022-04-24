@@ -2,7 +2,7 @@
 //
 const textDisplay = document.getElementById('fader')
 const connectVal = [
-    "<a class='lead' href='#' target='_blank'>You should see my resume!</a>", 
+    "<a class='lead' href='/assets/Jonathan Dikteruk Resume 22.pdf' target='_blank'>You should see my resume!</a>", 
     "<a class='lead' href='https://www.linkedin.com/in/jonathandikteruk' target='_blank'>Connect with me on LinkedIn!</a>", 
     "<a class='lead' href='#Contact'>Send me a message right now!</a>", 
     "<span class='lead' >Continue reading. Let's connect afterwards.</span>"
